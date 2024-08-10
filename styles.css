@@ -1,18 +1,34 @@
+::selection {
+    background-color: #005f56;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #005f56;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(135deg, #f0fdf4, #e6fffa);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-::selection {
-    background-color: #005f56;
-    color: #ffffff;
+html {
+    scroll-behavior: smooth;
 }
 
 /* Setting up the base font and body background */
 body {
+    background: linear-gradient(135deg, #f0fdf4, #e6fffa);
     font-family: 'Montserrat', sans-serif;
-    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
 }
@@ -20,7 +36,6 @@ body {
 /* Hero section design */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #f0fdf4, #e6fffa);
     position: relative;
     overflow: hidden;
 }
@@ -155,8 +170,8 @@ body {
     width: 200px;
     height: 200px;
     background-color: #00796b;
-    bottom: -50px;
-    right: -50px;
+    bottom: 0px;
+    right: 0px;
     animation: float 6s ease-in-out infinite 1s;
 }
 
@@ -304,9 +319,9 @@ body {
     
     .nav {
         position: relative;
-        background-color: #ffffff; /* Background color for the nav */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        z-index: 1000; /* Ensure it is above other content */
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
     
     .nav-links {
@@ -319,32 +334,32 @@ body {
         width: 100%;
         border-top: 1px solid #eaeaea;
         padding: 1rem 0;
-        opacity: 0; /* Start hidden */
-        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
-        transform: translateY(-10px); /* Slightly offset for animation */
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(-10px);
     }
     
     .nav-links.active {
-        display: flex; /* Show links */
-        opacity: 1; /* Fade in */
-        transform: translateY(0); /* Move to original position */
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
     
     .nav-links li {
         margin: 0;
-        padding: 0.8rem 1.5rem; /* More padding for touch targets */
+        padding: 0.8rem 1.5rem;
         text-align: center;
-        transition: background-color 0.3s ease; /* Transition for hover effect */
+        transition: background-color 0.3s ease;
     }
     
     .nav-links li:hover {
-        background-color: #f0f0f0; /* Subtle hover effect */
+        background-color: #f0f0f0;
     }
     
     .nav-toggle {
         display: block;
         cursor: pointer;
-        z-index: 1001; /* Ensure it's above the nav links */
+        z-index: 1001;
     }
     
     .nav-toggle span {
@@ -409,5 +424,141 @@ body {
 
     .cta-button {
         padding: 0.6rem 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Festival Section  */
+.festivals-section {
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #005f30;
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #005f30;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+.festival-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.festival-card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.festival-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.festival-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.festival-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.festival-card:hover .festival-image img {
+    transform: scale(1.1);
+}
+
+.festival-content {
+    padding: 20px;
+}
+
+.festival-content h3 {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 1.2rem;
+    color: #005f30;
+    margin-bottom: 10px;
+}
+
+.festival-content p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .festivals-section {
+        padding: 80px 5%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .festival-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .festival-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .festivals-section {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .festival-card {
+        max-width: 300px;
     }
 }

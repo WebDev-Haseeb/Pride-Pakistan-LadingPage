@@ -4,6 +4,7 @@ let heroContent = document.getElementsByClassName('hero-content')[0];
 
 navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+    
     navToggle.classList.toggle("active");
 
     if (navLinks.classList.contains('active')) {
