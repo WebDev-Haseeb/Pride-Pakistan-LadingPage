@@ -391,6 +391,10 @@ body {
     .hero-content.dimmed {
         filter: opacity(0.3);
     }
+
+    .hero {
+        height: 85vh;
+    }
 }
 
 /* Mobile Styles */
@@ -410,6 +414,10 @@ body {
     .mouse {
         width: 25px;
         height: 40px;
+    }
+
+    .hero {
+        height: 70vh;
     }
 }
 
