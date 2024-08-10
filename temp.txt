@@ -1,26 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pioneers - Unity in Diversity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">Pixel Pioneers</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#festivals">Festivals</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#linguistics">Linguistics</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1 class="title">Unity in Diversity</h1>
+            <p class="subtitle">Celebrating Pakistan's Rich Heritage</p>
+            <a href="#explore" class="cta-button">Explore Our Culture</a>
+        </div>
+        <div class="hero-background">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Setting up the base font and body background */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #f0f0f0;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Hero section design */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #f0fdf4, #e6fffa);
+    background: linear-gradient(135deg, #e6f7ff, #ffffff);
     position: relative;
     overflow: hidden;
 }
 
-/* Navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -31,18 +78,11 @@ body {
 }
 
 .logo {
-    text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #005f56;
-    text-shadow: 2px 2px 4px rgba(0, 100, 0, 0.15);
+    color: #006400;
+    text-shadow: 2px 2px 4px rgba(0, 100, 0, 0.1);
     transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.logo a {
-    text-decoration: none;
-    color: #005f30;
 }
 
 .logo:hover {
@@ -60,19 +100,17 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #005f30;
+    color: #006400;
     font-weight: 600;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
-    padding: 0.5rem;
 }
 
 .nav-links a:hover {
-    color: #00796b;
+    color: #00a86b;
     transform: translateY(-2px);
 }
 
-/* Hero content */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -88,14 +126,14 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 4.5rem;
     font-weight: 700;
-    color: #005f30;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 6px rgba(0, 100, 0, 0.2);
+    color: #006400;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 100, 0, 0.1);
 }
 
 .subtitle {
-    font-size: 1.7rem;
-    color: #005f30;
+    font-size: 1.5rem;
+    color: #00a86b;
     margin-bottom: 2rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards 1s;
@@ -103,8 +141,8 @@ body {
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: #005f30;
+    padding: 0.8rem 2rem;
+    background-color: #006400;
     color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
@@ -112,16 +150,14 @@ body {
     transition: all 0.3s ease;
     opacity: 0;
     animation: fadeInUp 1s ease forwards 1.5s;
-    box-shadow: 0 8px 15px rgba(0, 100, 0, 0.1);
 }
 
 .cta-button:hover {
-    background-color: rgb(7, 134, 47);
+    background-color: #00a86b;
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 100, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2);
 }
 
-/* Hero background animations */
 .hero-background {
     position: absolute;
     top: 0;
@@ -139,7 +175,7 @@ body {
 .circle-1 {
     width: 300px;
     height: 300px;
-    background-color: #005f56;
+    background-color: #006400;
     top: -100px;
     left: -100px;
     animation: float 8s ease-in-out infinite;
@@ -148,7 +184,7 @@ body {
 .circle-2 {
     width: 200px;
     height: 200px;
-    background-color: #00796b;
+    background-color: #00a86b;
     bottom: -50px;
     right: -50px;
     animation: float 6s ease-in-out infinite 1s;
@@ -157,7 +193,7 @@ body {
 .circle-3 {
     width: 150px;
     height: 150px;
-    background-color: #009688;
+    background-color: #4caf50;
     top: 50%;
     left: 50%;
     animation: float 7s ease-in-out infinite 0.5s;
@@ -169,7 +205,7 @@ body {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 20px solid #005f56;
+    border-bottom: 20px solid #006400;
     opacity: 0.2;
 }
 
@@ -191,7 +227,6 @@ body {
     animation: twinkle 5s ease-in-out infinite 0.5s;
 }
 
-/* Scroll indicator styles */
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -205,7 +240,7 @@ body {
 .mouse {
     width: 30px;
     height: 50px;
-    border: 2px solid #005f56;
+    border: 2px solid #006400;
     border-radius: 20px;
     position: relative;
 }
@@ -218,13 +253,12 @@ body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #005f56;
+    background-color: #006400;
     border-radius: 50%;
     opacity: 1;
     animation: scroll 2s infinite;
 }
 
-/* Animations */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -268,76 +302,73 @@ body {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
     }
-    50% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(10px);
-    }
     100% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
     }
 }
 
-/* Mobile Styles */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #006400;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
     .title {
         font-size: 3rem;
     }
 
     .subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
     }
 
     .cta-button {
-        padding: 0.8rem 2rem;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .nav-toggle {
-        display: block;
-        cursor: pointer;
-        z-index: 11;
-    }
-
-    .nav-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin-bottom: 5px;
-        background-color: #005f56;
-        transition: all 0.3s ease;
-    }
-
-    .nav-toggle.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #ffffff;
-        width: 100%;
-        border-top: 1px solid #eaeaea;
-        padding: 1rem 0;
-    }
-
-    .nav-links li {
-        margin: 0;
-        padding: 0.8rem 0;
-        text-align: center;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
