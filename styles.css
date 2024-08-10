@@ -572,6 +572,6 @@ body {
     }
 
     .festival-card {
-        max-width: 80vw;
+        width: 90vw;
     }
 }
