@@ -370,6 +370,10 @@ body {
     
     .hero-content {
         z-index: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .hero-content.dimmed {
         filter: opacity(0.3);
     }
 }
