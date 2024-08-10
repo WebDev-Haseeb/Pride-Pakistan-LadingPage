@@ -476,7 +476,7 @@ body {
 }
 
 .festival-card {
-    width: 300px;
+    width: 28vw;
     background-color: #ffffff;
     border-radius: 15px;
     overflow: hidden;
@@ -513,7 +513,6 @@ body {
 }
 
 .festival-content h3 {
-    /* font-family: 'Playfair Display', serif; */
     font-size: 1.2rem;
     color: #005f30;
     margin-bottom: 10px;
@@ -537,13 +536,20 @@ body {
 }
 
 /* Responsive design */
+@media screen and (max-width: 1150px) {
+    .festival-card {
+        width: 40vw;
+    }
+    
+}
+
 @media (max-width: 768px) {
     .festivals-section {
         padding: 80px 5%;
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .festival-container {
@@ -552,8 +558,7 @@ body {
     }
 
     .festival-card {
-        width: 100%;
-        max-width: 350px;
+        width: 70vw;
     }
 }
 
@@ -563,10 +568,10 @@ body {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .festival-card {
-        max-width: 300px;
+        max-width: 80vw;
     }
 }
