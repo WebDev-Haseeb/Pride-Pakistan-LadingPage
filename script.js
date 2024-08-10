@@ -1,0 +1,7 @@
+let navToggle = document.getElementsByClassName("nav-toggle")[0];
+let navLinks = document.getElementsByClassName("nav-links")[0];
+
+navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    navToggle.classList.toggle("active");
+})
