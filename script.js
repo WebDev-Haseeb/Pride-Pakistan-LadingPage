@@ -13,7 +13,11 @@ navToggle.addEventListener("click", () => {
     }
 })
 
-AOS.init({
-    duration: 1000,
-    once: true
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+});

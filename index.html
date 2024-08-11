@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pakistan - Unity in Diversity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./festivals.css">
+    <link rel="stylesheet" href="./architecture.css">
 
     <link rel="icon" href="./images/icon.png">
     <link
@@ -66,10 +70,11 @@
 
     <!-- Festivals Section. -->
     <section id="festivals" class="festivals-section">
-        <h2 class="section-title">Vibrant Festivals</h2>
+        <h2 class="section-title" data-aos="fade-up">Festivals</h2>
+
         <div class="festival-container">
 
-            <div class="festival-card">
+            <div class="festival-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="festival-image">
                     <img src="./images/eid.jpg" alt="Eid celebration">
                 </div>
@@ -80,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="festival-card">
+            <div class="festival-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="festival-image">
                     <img src="./images/eid-milad.jpg" alt="Eid Milad-un-Nabi celebration">
                 </div>
@@ -91,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="festival-card">
+            <div class="festival-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="festival-image">
                     <img src="./images/defence.jpg" alt="Defence Day celebration">
                 </div>
@@ -102,7 +107,7 @@
                 </div>
             </div>
 
-            <div class="festival-card">
+            <div class="festival-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="festival-image">
                     <img src="./images/pakistan-day.jpg" alt="Pakistan Day celebration">
                 </div>
@@ -113,7 +118,7 @@
                 </div>
             </div>
 
-            <div class="festival-card">
+            <div class="festival-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="festival-image">
                     <img src="./images/independence.jpg" alt="Independence Day celebration">
                 </div>
@@ -124,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="festival-card">
+            <div class="festival-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="festival-image">
                     <img src="./images/basant.jpg" alt="Basant kite festival">
                 </div>
@@ -134,12 +139,116 @@
                 </div>
             </div>
 
-
         </div>
     </section>
 
 
-    <script src="script.js"></script>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture-section">
+        <h2 class="section-title">Architecture</h2>
+
+        <div class="architecture-container">
+
+            <div class="architecture-card" data-aos="fade-up">
+                <div class="architecture-image">
+                    <img src="./images/badshahi-mosque.jpg" alt="Badshahi Mosque">
+                    <div class="overlay">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                </div>
+                <div class="architecture-content">
+                    <h3>Badshahi Mosque</h3>
+                    <p>A magnificent Mughal-era mosque in Lahore, known for its grandeur and intricate design.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Badshahi_Mosque" target="_blank" class="learn-more">Learn
+                        More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="architecture-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="architecture-image">
+                    <img src="./images/faisal-mosque.jpg" alt="Faisal Mosque">
+                    <div class="overlay">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                </div>
+                <div class="architecture-content">
+                    <h3>Faisal Mosque</h3>
+                    <p>A modern architectural marvel in Islamabad, blending contemporary and traditional Islamic
+                        designs.</p>
+                    <a href="https://en.wikipedia.org/wiki/Faisal_Mosque" target="_blank" class="learn-more">Learn More
+                        <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="architecture-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="architecture-image">
+                    <img src="./images/minar-e-pakistan.jpg" alt="Minar-e-Pakistan">
+                    <div class="overlay">
+                        <i class="fas fa-monument"></i>
+                    </div>
+                </div>
+                <div class="architecture-content">
+                    <h3>Minar-e-Pakistan</h3>
+                    <p>A national monument in Lahore commemorating the Lahore Resolution of 1940.</p>
+                    <a href="https://en.wikipedia.org/wiki/Minar-e-Pakistan" target="_blank" class="learn-more">Learn
+                        More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2 class="timeline-title">Journey Through Time</h2>
+
+            <div class="timeline">
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-content">
+                  <span class="date">1526 - 1857</span>
+                  <h3>Mughal Era</h3>
+                  <p>Intricate designs, grand domes, and expansive gardens characterized this period's architecture.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-content">
+                  <span class="date">1858 - 1947</span>
+                  <h3>Colonial Period</h3>
+                  <p>British influence brought neo-classical and Gothic revival styles to Pakistan's architectural landscape.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-content">
+                  <span class="date">1947 - 1970</span>
+                  <h3>Early Independence</h3>
+                  <p>Post-independence architecture focused on creating a new national identity, blending traditional and modern elements.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-content">
+                  <span class="date">1971 - 2000</span>
+                  <h3>Modernization Era</h3>
+                  <p>This period saw the rise of contemporary architecture, with a focus on functionality and urban development.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-content">
+                  <span class="date">2001 - Present</span>
+                  <h3>Contemporary Fusion</h3>
+                  <p>Modern Pakistani architecture embraces sustainable design, cutting-edge technology, and a revival of traditional motifs.</p>
+                </div>
+              </div>
+              </div>
+          
+        
+    </section>
+
+
+<script src="script.js"></script>
 </body>
 
 </html>
