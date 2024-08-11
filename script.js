@@ -12,3 +12,8 @@ navToggle.addEventListener("click", () => {
         heroContent.classList.remove('dimmed');
     }
 })
+
+AOS.init({
+    duration: 1000,
+    once: true
+  });
