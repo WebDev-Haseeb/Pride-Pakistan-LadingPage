@@ -30,6 +30,7 @@ html {
     bottom: 5vh;
     right: 5vw;
     background-color: #005f30;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -419,6 +420,10 @@ body {
 
     .hero {
         height: 85vh;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.7rem;
     }
 }
 

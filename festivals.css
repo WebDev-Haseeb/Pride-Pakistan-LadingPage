@@ -1,6 +1,7 @@
 /* Festival Section  */
 .festivals-section {
-    padding: 100px 5%;
+    padding: 0 5%;
+    padding-bottom: 100px;
     overflow: hidden;
 }
 
@@ -116,7 +117,7 @@
     }
 
     .festival-card {
-        width: 70vw;
+        width: 90vw;
     }
 }
 
@@ -127,10 +128,6 @@
 
     .section-title {
         font-size: 1.7rem;
-    }
-
-    .festival-card {
-        width: 90vw;
     }
 }
 
