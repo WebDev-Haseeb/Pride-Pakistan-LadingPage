@@ -422,8 +422,8 @@ body {
         height: 85vh;
     }
 
-    .cta-button {
-        padding: 0.7rem 1.7rem;
+    .scroll-indicator {
+        bottom: 10px;
     }
 }
 
