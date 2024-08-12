@@ -21,3 +21,82 @@ document.addEventListener('DOMContentLoaded', function() {
         mirror: false
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const regionButtons = document.querySelectorAll('.region-btn');
+    const regionData = {
+        punjab: {
+          name: "Punjab",
+          description: "Known for its vibrant bhangra dance, colorful truck art, and delicious cuisine including sarson ka saag and makki di roti.",
+          capital: "Lahore",
+          landmark: "Badshahi Mosque",
+          dress: "Shalwar Kameez with Turban",
+          festival: "Basant",
+          fact: "Punjab is home to five rivers: Sutlej, Beas, Ravi, Chenab, and Jhelum, which give the region its name 'Punjab' meaning 'land of five rivers'.",
+          image: "./images/punjab-culture.jpg"
+        },
+        sindh: {
+          name: "Sindh",
+          description: "Famous for its Ajrak cloth, Sindhi embroidery, and the ancient Indus Valley Civilization sites like Mohenjo-daro.",
+          capital: "Karachi",
+          landmark: "Mohatta Palace",
+          dress: "Ajrak and Topi",
+          festival: "Sindhi Topi Day",
+          fact: "Sindh is home to the world's largest irrigation system, the Indus Basin Irrigation System.",
+          image: "./images/sindh-culture.jpg"
+        },
+        balochistan: {
+          name: "Balochistan",
+          description: "Known for its vast deserts, rugged mountains, and rich cultural heritage, including Balochi music and handicrafts.",
+          capital: "Quetta",
+          landmark: "Ziarat Juniper Forest",
+          dress: "Shalwar Kameez and Turban for men, Shalwar Kameez for women",
+          festival: "Kalash Festival",
+          fact: "Balochistan is Pakistan's largest province, sharing borders with Iran and Afghanistan.",
+          image: "./images/balochistan-culture.jpg"
+        },
+        kpk: {
+          name: "Khyber Pakhtunkhwa",
+          description: "Renowned for its historical significance, breathtaking landscapes, and Pashtun culture with its warm hospitality.",
+          capital: "Peshawar",
+          landmark: "Khyber Pass",
+          dress: "Shalwar Kameez and Waistcoat for men, Shalwar Kameez for women",
+          festival: "Basant",
+          fact: "KPK is home to the ancient Gandhara civilization and shares a border with Afghanistan.",
+          image: "./images/kpk-culture.jpg"
+        },
+        gilgit: {
+          name: "Gilgit-Baltistan",
+          description: "A paradise for adventure enthusiasts, offering stunning mountain peaks like K2, glaciers, and serene lakes.",
+          capital: "Gilgit",
+          landmark: "K2 Mountain",
+          dress: "Shalwar Kameez and Cap for men, Shalwar Kameez for women",
+          festival: "Hunza Festival",
+          fact: "Gilgit-Baltistan is known as the 'Roof of the World' due to its high altitude.",
+          image: "./images/gilgit-culture.jpg"
+        }
+      };
+      
+  
+    function updateRegionInfo(region) {
+      const data = regionData[region];
+      document.getElementById('region-name').textContent = data.name;
+      document.getElementById('region-description').textContent = data.description;
+      document.getElementById('region-capital').textContent = data.capital;
+      document.getElementById('region-landmark').textContent = data.landmark;
+      document.getElementById('region-dress').textContent = data.dress;
+      document.getElementById('region-festival').textContent = data.festival;
+      document.getElementById('region-fact').textContent = data.fact;
+      document.getElementById('region-image').src = data.image;
+    }
+  
+    regionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        regionButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        updateRegionInfo(this.dataset.region);
+      });
+    });
+  });
