@@ -118,3 +118,120 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const progressBar = document.getElementById('progressBar');
+  const urduLyrics = document.getElementById('urduLyrics');
+  const englishLyrics = document.getElementById('englishLyrics');
+  
+  const audio = new Audio('./national-anthem.mp3'); // Replace with actual path
+  let isPlaying = false;
+  
+  const lyrics = [
+    {
+        urdu: "پاک سرزمین شاد باد",
+        english: "Blessed be the sacred land",
+        time: 3
+    },
+    {
+        urdu: "کشورِ حسین شاد باد",
+        english: "Happy be the bounteous realm",
+        time: 8
+    },
+    {
+        urdu: "تُو نشانِ عزمِ عالی شان",
+        english: "Thou symbol of high resolve",
+        time: 13
+    },
+    {
+        urdu: "ارضِ پاکستان!",
+        english: "Land of Pakistan!",
+        time: 17
+    },
+    {
+        urdu: "مرکزِ یقین شاد باد",
+        english: "Blessed be thou center of faith",
+        time: 19
+    },
+    {
+        urdu: "پاک سرزمین کا نظام",
+        english: "The Order of this Sacred Land",
+        time: 24
+    },
+    {
+        urdu: "قوَّتِ اُخوَّتِ عوام",
+        english: "Is the might of the brotherhood of the people",
+        time: 29
+    },
+    {
+        urdu: "قوم، ملک، سلطنت!",
+        english: "Nation, Country, and State!",
+        time: 34
+    },
+    {
+        urdu: "پائِندہ تابِندہ باد!",
+        english: "May the Nation, the Country, the State",
+        time: 37
+    },
+    {
+        urdu: "شاد باد، منزِلِ مراد",
+        english: "Shine in glory everlasting!",
+        time: 40
+    },
+    {
+        urdu: "پرچمِ ستاره و ہلال",
+        english: "Blessed be the flag with the star and crescent",
+        time: 45
+    },
+    {
+        urdu: "رہبرِ ترقّی و کمال",
+        english: "Symbol of progress and perfection",
+        time: 50
+    },
+    {
+        urdu: "ترجمانِ ماضی، شانِ حال",
+        english: "Interpreter of our past, glory of our present!",
+        time: 56
+    },
+    {
+        urdu: "جانِ استقبال!",
+        english: "Inspiration of the future!",
+        time: 59
+    },
+    {
+        urdu: "سایهٔ خدائے ذو الجلال",
+        english: "Shade of God, the Glorious and Mighty",
+        time: 61
+    }
+];
+  
+  playPauseBtn.addEventListener('click', function() {
+      if (isPlaying) {
+          audio.pause();
+          playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+      } else {
+          audio.play();
+          playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      }
+      isPlaying = !isPlaying;
+  });
+  
+  audio.addEventListener('timeupdate', function() {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = `${progress}%`;
+      
+      updateLyrics();
+  });
+  
+  function updateLyrics() {
+      for (let i = lyrics.length - 1; i >= 0; i--) {
+          if (audio.currentTime >= lyrics[i].time) {
+              urduLyrics.textContent = lyrics[i].urdu;
+              englishLyrics.textContent = lyrics[i].english;
+              break;
+          }
+      }
+  }
+});
